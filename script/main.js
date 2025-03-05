@@ -13,7 +13,6 @@ window.addEventListener('load', () => {
             document.querySelector('.song').play();
             animationTimeline();
         } else {
-            document.querySelector('.song').play();
             animationTimeline();
         }
     });
@@ -105,7 +104,7 @@ const animationTimeline = () => {
     .to(".fake-btn", 0.1, {
         backgroundColor: "rgb(127, 206, 248)",
     },
-    "+=4")
+    "+=3")
     .to(
         ".four",
         0.5, {
@@ -256,6 +255,17 @@ const animationTimeline = () => {
         y: 30,
         zIndex: "-1",
     })
+
+    .from(".six-half", 0.7, {
+        opacity: 0,
+        y: 10
+    })
+    .to(".six-half", 0.7, {
+        opacity: 0,
+        y: 30,
+        zIndex: "-1",
+    }, "+=3")
+
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
         ".last-smile",
